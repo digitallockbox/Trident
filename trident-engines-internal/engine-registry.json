@@ -1,0 +1,8 @@
+{
+  "engines": [
+    { "id": "A-engine", "active": true },
+    { "id": "B-engine", "active": true },
+    { "id": "C-engine", "active": true },
+    { "id": "D-engine", "active": true }
+  ]
+}

@@ -1,3 +1,5 @@
 export const requestLogger = () => {
-    console.log("Request logger placeholder");
-};
+    export const requestLogger = (req, res, next) => {
+        console.log(`[${req.method}] ${req.url}`);
+        next();
+    };

@@ -1,3 +1,27 @@
+import express from "express";
+import cors from "cors";
+import { apiRoutes } from "./routes/api.routes";
+import { authRoutes } from "./routes/auth.routes";
+import { systemRoutes } from "./routes/system.routes";
+import { requestLogger } from "./middleware/request-logger";
+import { errorHandler } from "./middleware/error-handler";
+
+const app = express();
+app.use(express.json());
+app.use(cors());
+app.use(requestLogger);
+
+app.use("/api", apiRoutes);
+app.use("/api/auth", authRoutes);
+app.use("/api/system", systemRoutes);
+
+app.use(errorHandler);
+
+const PORT = process.env.PORT || 4000;
+app.listen(PORT, () => {
+    console.log(`Trident Backend Shell running on port ${PORT}`);
+});
+
 export const bootstrap = () => {
     console.log("Trident Backend Shell initialized");
 };

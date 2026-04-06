@@ -1,8 +1,32 @@
 {
   "engines": [
-    { "id": "A-engine", "active": true },
-    { "id": "B-engine", "active": true },
-    { "id": "C-engine", "active": true },
-    { "id": "D-engine", "active": true }
+    {
+      "id": "A-engine",
+      "name": "Engine A",
+      "version": "0.0.1",
+      "active": true,
+      "description": "Primary processing engine placeholder."
+    },
+    {
+      "id": "B-engine",
+      "name": "Engine B",
+      "version": "0.0.1",
+      "active": true,
+      "description": "Secondary processing engine placeholder."
+    },
+    {
+      "id": "C-engine",
+      "name": "Engine C",
+      "version": "0.0.1",
+      "active": true,
+      "description": "Analytics engine placeholder."
+    },
+    {
+      "id": "D-engine",
+      "name": "Engine D",
+      "version": "0.0.1",
+      "active": true,
+      "description": "Auxiliary engine placeholder."
+    }
   ]
 }

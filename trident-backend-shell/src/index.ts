@@ -1,10 +1,11 @@
 import express from "express";
 import cors from "cors";
-import { apiRoutes } from "./routes/api.routes";
 import { authRoutes } from "./routes/auth.routes";
 import { systemRoutes } from "./routes/system.routes";
 import { requestLogger } from "./middleware/request-logger";
 import { errorHandler } from "./middleware/error-handler";
+
+import { engineRoutes } from "./routes/engine.routes";
 
 const app = express();
 app.use(express.json());
@@ -14,6 +15,8 @@ app.use(requestLogger);
 app.use("/api", apiRoutes);
 app.use("/api/auth", authRoutes);
 app.use("/api/system", systemRoutes);
+
+app.use("/api/engines", engineRoutes);
 
 app.use(errorHandler);
 

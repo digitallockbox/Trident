@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: trident-backend
+  labels:
+    app: trident-backend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: trident-backend
+  template:
+    metadata:
+      labels:
+        app: trident-backend
+    spec:
+      containers:
+        - name: backend
+          image: trident-backend:latest
+          ports:
+            - containerPort: 4000
+          envFrom:
+            - secretRef:
+                name: trident-backend-secrets

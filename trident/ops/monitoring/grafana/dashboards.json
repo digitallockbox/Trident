@@ -1,0 +1,31 @@
+{
+  "dashboard": {
+    "title": "Trident Overview",
+    "panels": [
+      {
+        "title": "Request Rate",
+        "type": "graph",
+        "datasource": "Prometheus",
+        "targets": [{ "expr": "rate(http_requests_total[5m])" }]
+      },
+      {
+        "title": "Error Rate",
+        "type": "graph",
+        "datasource": "Prometheus",
+        "targets": [
+          { "expr": "rate(http_requests_total{status=~\"5..\"}[5m])" }
+        ]
+      },
+      {
+        "title": "Response Latency p95",
+        "type": "graph",
+        "datasource": "Prometheus",
+        "targets": [
+          {
+            "expr": "histogram_quantile(0.95, rate(http_request_duration_seconds_bucket[5m]))"
+          }
+        ]
+      }
+    ]
+  }
+}

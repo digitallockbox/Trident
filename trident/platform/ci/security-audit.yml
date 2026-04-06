@@ -1,0 +1,43 @@
+name: Security Audit & Docs Update
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  snyk-scan-and-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        run: npm ci
+        working-directory: ./platform
+
+      - name: Run Snyk test (JSON output)
+        run: |
+          npm install -g snyk
+          snyk test --all-projects --json > snyk-results.json
+        working-directory: ./platform
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+
+      - name: Update DEPENDENCY_RISKS.md
+        run: |
+          node ./scripts/update-dependency-risks.js snyk-results.json ./docs/DEPENDENCY_RISKS.md
+        working-directory: ./platform
+
+      - name: Commit updated docs (if changed)
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore(docs): update dependency risk documentation [ci skip]"
+          file_pattern: "docs/DEPENDENCY_RISKS.md"
+          branch: ${{ github.head_ref || github.ref_name }}

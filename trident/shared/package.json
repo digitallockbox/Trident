@@ -1,0 +1,17 @@
+{
+  "name": "@trident/shared",
+  "version": "1.0.0",
+  "description": "Shared types and utilities for Trident frontend and backend",
+  "main": "src/types/index.ts",
+  "types": "src/types/index.ts",
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "types",
+    "shared",
+    "trident"
+  ],
+  "author": "",
+  "license": "UNLICENSED"
+}

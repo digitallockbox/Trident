@@ -1,0 +1,22 @@
+%% Mermaid Diagram: Trident System Architecture
+%% Place in: docs/trident-architecture.mmd
+
+flowchart TD
+  UI[Frontend UI]
+  SDK[Trident SDK]
+  WALLET[Wallet Adapter]
+  CHAIN[Trident On-Chain Program]
+  INDEXER[Backend Indexer]
+  API[API Layer]
+  DB[(Database)]
+  DASH[Dashboards]
+
+  UI --> SDK
+  SDK --> WALLET
+  WALLET --> CHAIN
+  CHAIN --> INDEXER
+  INDEXER --> DB
+  INDEXER --> API
+  API --> UI
+  DB --> DASH
+  API --> DASH

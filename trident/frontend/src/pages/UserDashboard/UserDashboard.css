@@ -1,0 +1,262 @@
+.user-dashboard {
+  display: flex;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a1a22 60%, #1a0a22 100%);
+}
+.dashboard-sidebar {
+  width: 220px;
+  background: rgba(10, 26, 34, 0.85);
+  border-right: 1px solid rgba(255, 255, 255, 0.04);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1rem 1rem 1rem;
+  color: #edf6fb;
+  min-height: 100vh;
+}
+.sidebar-logo {
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  margin-bottom: 2.5rem;
+  color: #00fff7;
+  text-shadow: 0 2px 16px #00fff7cc;
+  text-align: center;
+}
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.15rem;
+  color: #edf6fb;
+  text-decoration: none;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  transition:
+    background 0.18s,
+    color 0.18s;
+}
+.sidebar-link:hover,
+.sidebar-link.active {
+  background: linear-gradient(90deg, #00fff7 0%, #7f5cff 100%);
+  color: #0a1a22;
+}
+.sidebar-link-icon {
+  font-size: 1.5rem;
+}
+.sidebar-link-label {
+  font-weight: 600;
+}
+.sidebar-engines {
+  margin-top: auto;
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  padding-top: 2rem;
+}
+.engine-icon {
+  font-size: 1.4rem;
+  filter: drop-shadow(0 0 6px #00fff7cc);
+  opacity: 0.85;
+  transition: transform 0.15s;
+}
+.engine-icon:hover {
+  transform: scale(1.18) rotate(-8deg);
+  opacity: 1;
+}
+.dashboard-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.dashboard-topbar {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  background: rgba(20, 30, 40, 0.7);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+.topbar-actions {
+  display: flex;
+  gap: 1.25rem;
+}
+.topbar-action-btn {
+  background: linear-gradient(90deg, #00fff7 0%, #7f5cff 100%);
+  color: #0a1a22;
+  font-weight: 700;
+  border: none;
+  border-radius: 0.75rem;
+  padding: 0.5rem 1.25rem;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 2px 12px 0 rgba(127, 92, 255, 0.1);
+  transition:
+    background 0.2s,
+    transform 0.12s;
+}
+.topbar-action-btn:hover {
+  background: linear-gradient(90deg, #7f5cff 0%, #00fff7 100%);
+  transform: translateY(-2px) scale(1.04);
+}
+.topbar-user {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #edf6fb;
+}
+.user-avatar {
+  font-size: 1.6rem;
+  background: linear-gradient(135deg, #00fff7 0%, #7f5cff 100%);
+  border-radius: 50%;
+  padding: 0.25rem 0.5rem;
+  color: #0a1a22;
+  box-shadow: 0 2px 8px 0 #00fff744;
+}
+.user-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+.dashboard-card {
+  background: rgba(20, 30, 40, 0.7);
+  border-radius: 1.25rem;
+  box-shadow: 0 4px 32px 0 rgba(0, 0, 0, 0.18);
+  padding: 2rem;
+  color: #edf6fb;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: box-shadow 0.2s;
+}
+.dashboard-card:hover {
+  box-shadow: 0 8px 48px 0 rgba(0, 255, 255, 0.08);
+}
+.revenue-overview-panel {
+  width: 100%;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 2rem;
+  animation: panelSlideIn 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+@keyframes panelSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-32px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+.balance-card {
+  background: linear-gradient(90deg, #00fff7 0%, #7f5cff 100%);
+  color: #0a1a22;
+  border-radius: 1.5rem;
+  box-shadow: 0 6px 32px 0 #00fff744;
+  padding: 2.5rem 2rem 2rem 2rem;
+  margin: 0 auto;
+  max-width: 480px;
+  text-align: center;
+  position: relative;
+  animation: balancePulse 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+@keyframes balancePulse {
+  0% {
+    box-shadow: 0 0 0 0 #00fff7cc;
+  }
+  60% {
+    box-shadow: 0 0 32px 12px #00fff7cc;
+  }
+  100% {
+    box-shadow: 0 6px 32px 0 #00fff744;
+  }
+}
+.balance-label {
+  font-size: 1.2rem;
+  font-weight: 600;
+  opacity: 0.85;
+  margin-bottom: 0.5rem;
+}
+.balance-amount {
+  font-size: 2.8rem;
+  font-weight: 900;
+  letter-spacing: 0.01em;
+  line-height: 1.1;
+  margin-bottom: 0.25rem;
+  transition: color 0.2s;
+}
+.revenue-metrics-panel {
+  margin: 0 auto;
+  max-width: 900px;
+}
+.metrics-row {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+.metric-card {
+  flex: 1;
+  background: rgba(0, 255, 255, 0.08);
+  border-radius: 0.75rem;
+  padding: 1.25rem 1rem;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #00fff7;
+  text-align: center;
+  box-shadow: 0 2px 12px 0 rgba(0, 255, 255, 0.04);
+  transition: background 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+.metric-animate {
+  animation: metricPulse 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+@keyframes metricPulse {
+  0% {
+    box-shadow: 0 0 0 0 #00fff7cc;
+  }
+  60% {
+    box-shadow: 0 0 24px 8px #00fff7cc;
+  }
+  100% {
+    box-shadow: 0 2px 12px 0 rgba(0, 255, 255, 0.04);
+  }
+}
+.metric-card span {
+  display: block;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #edf6fb;
+  margin-top: 0.5rem;
+}
+.request-payout-btn {
+  margin-top: 1.5rem;
+  background: linear-gradient(90deg, #00fff7 0%, #7f5cff 100%);
+  color: #0a1a22;
+  font-weight: 700;
+  border: none;
+  border-radius: 0.75rem;
+  padding: 0.75rem 2rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 2px 12px 0 rgba(127, 92, 255, 0.1);
+  transition: background 0.2s;
+}
+.request-payout-btn:hover {
+  background: linear-gradient(90deg, #7f5cff 0%, #00fff7 100%);
+}

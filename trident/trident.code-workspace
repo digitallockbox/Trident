@@ -1,0 +1,53 @@
+{
+  "folders": [
+    {
+      "name": "trident-core-internal",
+      "path": "../trident-core-internal"
+    },
+    {
+      "name": "trident-backend-shell",
+      "path": "../trident-backend-shell"
+    },
+    {
+      "name": "trident-frontend",
+      "path": "../trident-frontend"
+    },
+    {
+      "name": "trident-engines-internal",
+      "path": "../trident-engines-internal"
+    }
+  ],
+  "settings": {
+    "editor.formatOnSave": true,
+    "eslint.validate": ["javascript", "typescript", "typescriptreact"],
+    "files.exclude": {
+      "**/node_modules": true,
+      "**/dist": true,
+      "**/build": true,
+    },
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "terminal.integrated.defaultProfile.osx": "zsh",
+    "terminal.integrated.defaultProfile.linux": "bash",
+    "cSpell.enabledSchemes": {
+      "file": false,
+    },
+    "powershell.cwd": "trident-backend-shell",
+  },
+  "extensions": {
+    "recommendations": [
+      "dbaeumer.vscode-eslint",
+      "esbenp.prettier-vscode",
+      "streetsidesoftware.code-spell-checker",
+      "eamodio.gitlens",
+      "ms-vscode.vscode-typescript-next",
+      "formulahendry.auto-close-tag",
+      "formulahendry.auto-rename-tag",
+      "dsznajder.es7-react-js-snippets",
+      "xabikos.javascriptsnippets",
+      "ms-azuretools.vscode-docker",
+      "humao.rest-client",
+      "usernamehw.errorlens",
+    ],
+  },
+}

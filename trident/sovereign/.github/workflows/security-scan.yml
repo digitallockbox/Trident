@@ -1,0 +1,35 @@
+name: Security Scan
+on:
+  push:
+    branches: [main, develop]
+jobs:
+  codeql:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: CodeQL Analysis
+        uses: github/codeql-action/analyze@v3
+  trufflehog:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: TruffleHog Scan
+        run: trufflehog filesystem .
+  gitleaks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: GitLeaks Scan
+        run: gitleaks detect --source .
+  sbom:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generate SBOM
+        run: yarn sbom
+  checkov:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Checkov Scan
+        run: checkov -d .

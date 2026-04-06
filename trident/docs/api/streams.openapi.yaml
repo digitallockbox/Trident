@@ -1,0 +1,101 @@
+paths:
+  /streams/start:
+    post:
+      summary: Start a new stream
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/StreamStartRequest"
+      responses:
+        "201":
+          description: Stream started
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/StreamStartResponse"
+        "400":
+          description: Invalid payload
+
+  /streams/stop:
+    post:
+      summary: Stop a stream
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/StreamStopRequest"
+      responses:
+        "200":
+          description: Stream stopped
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/StreamStopResponse"
+        "400":
+          description: Invalid payload
+
+  /streams/list:
+    get:
+      summary: List all streams for the user
+      responses:
+        "200":
+          description: List of streams
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Stream"
+components:
+  schemas:
+    StreamStartRequest:
+      type: object
+      properties:
+        title:
+          type: string
+        category:
+          type: string
+      required: [title, category]
+    StreamStopRequest:
+      type: object
+      properties:
+        streamId:
+          type: string
+      required: [streamId]
+    StreamStartResponse:
+      type: object
+      properties:
+        streamId:
+          type: string
+        startedAt:
+          type: string
+          format: date-time
+    StreamStopResponse:
+      type: object
+      properties:
+        streamId:
+          type: string
+        endedAt:
+          type: string
+          format: date-time
+    Stream:
+      type: object
+      properties:
+        streamId:
+          type: string
+        title:
+          type: string
+        category:
+          type: string
+        status:
+          type: string
+          enum: [active, ended]
+        startedAt:
+          type: string
+          format: date-time
+        endedAt:
+          type: string
+          format: date-time

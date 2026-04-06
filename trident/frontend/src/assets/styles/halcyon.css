@@ -1,0 +1,25 @@
+@keyframes halcyon-breath {
+  0% {
+    opacity: var(--halcyon-opacity-low, 0.08);
+  }
+  50% {
+    opacity: var(--halcyon-opacity-high, 0.20);
+  }
+  100% {
+    opacity: var(--halcyon-opacity-low, 0.08);
+  }
+}
+
+.halcyon-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: -2;
+  background: radial-gradient(
+    circle at center,
+    var(--halcyon-color-1, rgba(170, 255, 204, 0.22)),
+    var(--halcyon-color-2, rgba(68, 221, 136, 0.08)),
+    transparent 70%
+  );
+  animation: halcyon-breath var(--halcyon-speed, 16s) ease-in-out infinite;
+}

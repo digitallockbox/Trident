@@ -1,0 +1,61 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id         String   @id @default(cuid())
+  wallet     String   @unique
+  tier       String   @default("bronze")
+  score      Int      @default(0)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+  payouts    Payout[]
+  fraudFlags FraudEvent[]
+}
+
+model Payout {
+  id            String      @id @default(cuid())
+  userId        String
+  amount        Decimal     @db.Decimal(18, 8)
+  tokenMint     String
+  txSignature   String?     @unique
+  status        PayoutStatus @default(PENDING)
+  cycleId       String?
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime    @updatedAt
+  user          User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  cycle         Cycle?      @relation(fields: [cycleId], references: [id])
+}
+
+model Cycle {
+  id          String   @id @default(cuid())
+  cycleNumber Int      @unique
+  startsAt    DateTime
+  endsAt      DateTime
+  closed      Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  payouts     Payout[]
+}
+
+model FraudEvent {
+  id          String   @id @default(cuid())
+  userId      String
+  eventType   String
+  severity    Int      @default(1)
+  detailsJson Json?
+  createdAt   DateTime @default(now())
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+enum PayoutStatus {
+  PENDING
+  SENT
+  CONFIRMED
+  FAILED
+}

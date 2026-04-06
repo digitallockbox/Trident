@@ -1,0 +1,76 @@
+openapi: 3.0.3
+info:
+  title: Trident Omega Engine API
+  version: 1.0.0
+  description: Sovereign payout API for the Omega engine. Requires hybrid authentication (see auth-spec.md).
+servers:
+  - url: /api
+paths:
+  /omega/payout:
+    post:
+      summary: Request a payout
+      description: |
+        Creates a payout request for the specified wallet and tenant. Requires hybrid authentication.
+      tags:
+        - Omega
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PayoutRequest"
+      responses:
+        "200":
+          description: Payout response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PayoutResponse"
+        "400":
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+      security:
+        - HybridAuth: []
+components:
+  securitySchemes:
+    HybridAuth:
+      type: apiKey
+      in: header
+      name: x-api-key
+      description: |
+        Hybrid authentication. Also requires x-solana-publickey, x-solana-signature, and x-solana-message headers. See auth-spec.md for details.
+  schemas:
+    PayoutRequest:
+      type: object
+      required:
+        - wallet
+        - amount
+      properties:
+        wallet:
+          type: string
+          description: Solana wallet address (base58)
+        amount:
+          type: number
+          description: Amount to payout (in smallest unit, e.g. lamports)
+        token:
+          type: string
+          description: Token mint address (base58), optional (default is SOL)
+    PayoutResponse:
+      type: object
+      required:
+        - ok
+      properties:
+        ok:
+          type: boolean
+        tx:
+          type: string
+          description: Transaction signature if successful
+        error:
+          type: string
+          description: Error message if failed

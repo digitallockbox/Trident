@@ -1,0 +1,111 @@
+.warroom-page {
+  padding: 2rem;
+  color: #edf6fb;
+}
+
+.warroom-heading {
+  margin: 0 0 1.5rem;
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.warroom-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.25rem;
+}
+
+.warroom-controls {
+  margin-top: 2rem;
+}
+
+.warroom-controls-heading {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #a0aec0;
+  margin: 0 0 1rem;
+}
+
+.warroom-controls-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.warroom-status-msg {
+  padding: 2rem;
+  color: rgba(237, 246, 251, 0.7);
+}
+
+.warroom-events {
+  margin-bottom: 1.75rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+}
+
+.warroom-events-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #a0aec0;
+  margin: 0 0 0.75rem;
+}
+
+.warroom-events-empty {
+  font-size: 0.85rem;
+  color: #718096;
+  margin: 0;
+}
+
+.warroom-events-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.warroom-event {
+  display: flex;
+  gap: 0.75rem;
+  align-items: baseline;
+  padding: 0.3rem 0.5rem;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.warroom-event-type {
+  flex-shrink: 0;
+  font-weight: 600;
+  color: #63b3ed;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+}
+
+.warroom-event-data {
+  color: #a0aec0;
+  word-break: break-all;
+}
+
+/* kept for any legacy usage */
+.warroom-pre {
+  background: #0a1a22;
+  padding: 1rem;
+  border-radius: 8px;
+  color: #edf6fb;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+}

@@ -1,0 +1,93 @@
+.payout-history-widget {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+}
+
+.payout-history-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #a0aec0;
+  margin: 0 0 1rem;
+}
+
+.payout-history-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-height: 260px;
+  overflow-y: auto;
+}
+
+.payout-history-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.45rem 0.6rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 6px;
+}
+
+.payout-history-amount {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #68d391;
+}
+
+.payout-history-time {
+  font-size: 0.78rem;
+  color: #718096;
+}
+
+.payout-history-empty,
+.payout-history-offline {
+  font-size: 0.85rem;
+  color: #718096;
+  margin: 0;
+}
+
+.payout-history-offline {
+  color: #fc8181;
+}
+
+.payout-history-replay {
+  margin-left: auto;
+  padding: 0.2rem 0.6rem;
+  border-radius: 5px;
+  border: 1px solid rgba(104, 211, 145, 0.35);
+  background: rgba(104, 211, 145, 0.07);
+  color: #68d391;
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition:
+    background 0.15s,
+    opacity 0.15s;
+}
+
+.payout-history-replay:hover:not(:disabled) {
+  background: rgba(104, 211, 145, 0.18);
+}
+
+.payout-history-replay:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.payout-history-replay-result {
+  margin: 0.6rem 0 0;
+  font-size: 0.8rem;
+  color: #68d391;
+}
+
+.payout-history-replay-error {
+  margin: 0.6rem 0 0;
+  font-size: 0.8rem;
+  color: #fc8181;
+}

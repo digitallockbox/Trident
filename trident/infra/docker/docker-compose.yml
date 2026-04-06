@@ -1,0 +1,34 @@
+version: "3.9"
+
+services:
+  backend:
+    build:
+      context: ../../backend
+      dockerfile: ../infra/docker/backend.Dockerfile
+    ports:
+      - "4000:4000"
+    env_file:
+      - ../env/backend.example.env
+    depends_on:
+      - postgres
+
+  frontend:
+    build:
+      context: ../../frontend
+      dockerfile: ../infra/docker/frontend.Dockerfile
+    ports:
+      - "3000:80"
+
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: trident
+      POSTGRES_PASSWORD: trident_dev
+      POSTGRES_DB: trident
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:

@@ -1,0 +1,56 @@
+.cycle-override-controls {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+}
+
+.cycle-override-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #a0aec0;
+  margin: 0 0 1rem;
+}
+
+.cycle-override-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.cycle-override-btn {
+  padding: 0.45rem 1rem;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.06);
+  color: #edf6fb;
+  font-size: 0.83rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition:
+    background 0.15s,
+    opacity 0.15s;
+}
+
+.cycle-override-btn:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.cycle-override-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.cycle-override-result {
+  margin: 0.75rem 0 0;
+  font-size: 0.8rem;
+  color: #68d391;
+}
+
+.cycle-override-error {
+  margin: 0.75rem 0 0;
+  font-size: 0.8rem;
+  color: #fc8181;
+}

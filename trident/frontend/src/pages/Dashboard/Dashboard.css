@@ -1,0 +1,14 @@
+.dashboard-page {
+  padding: 2rem;
+  color: #edf6fb;
+}
+
+.dashboard-pre {
+  background: #0a1a22;
+  padding: 1rem;
+  border-radius: 8px;
+  color: #edf6fb;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+}

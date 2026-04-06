@@ -1,0 +1,6 @@
+{
+  "name": "@trident/shared-types",
+  "version": "1.0.0",
+  "main": "engine.types.ts",
+  "types": "engine.types.ts"
+}

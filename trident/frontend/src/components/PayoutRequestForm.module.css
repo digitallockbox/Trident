@@ -1,0 +1,17 @@
+.form {
+  max-width: 400px;
+}
+
+.input {
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.result {
+  margin-top: 16px;
+}
+
+.error {
+  color: red;
+  margin-top: 12px;
+}

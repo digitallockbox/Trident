@@ -1,0 +1,18 @@
+.claim-button-wrapper {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.claim-button-message {
+  margin: 0;
+  font-size: 0.875rem;
+}
+
+.claim-button-message--success {
+  color: #8de6ff;
+}
+
+.claim-button-message--error {
+  color: #ffe29a;
+}

@@ -1,0 +1,126 @@
+.admin-status-msg {
+  padding: 2rem;
+  color: rgba(237, 246, 251, 0.7);
+}
+
+.admin-dashboard {
+  max-width: 1400px;
+}
+
+.admin-stat-card {
+  padding: 1.25rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(100, 116, 139, 0.2);
+  background: rgba(30, 41, 59, 0.4);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  text-align: center;
+}
+
+.admin-stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+
+.admin-stat-label {
+  font-size: 0.75rem;
+  color: rgba(148, 163, 184, 1);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.admin-search-input {
+  flex: 1;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(100, 116, 139, 0.3);
+  background: rgba(15, 23, 42, 0.6);
+  color: #e2e8f0;
+  font-size: 0.875rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.admin-search-input:focus {
+  border-color: rgba(34, 211, 238, 0.5);
+}
+
+.admin-search-input::placeholder {
+  color: rgba(148, 163, 184, 0.5);
+}
+
+.admin-filter-select {
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(100, 116, 139, 0.3);
+  background: rgba(15, 23, 42, 0.6);
+  color: #e2e8f0;
+  font-size: 0.875rem;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.admin-refresh-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(34, 211, 238, 0.3);
+  background: rgba(34, 211, 238, 0.1);
+  color: #22d3ee;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.admin-refresh-btn:hover:not(:disabled) {
+  background: rgba(34, 211, 238, 0.2);
+  border-color: rgba(34, 211, 238, 0.5);
+}
+
+.admin-refresh-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.admin-engine-card {
+  display: block;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(100, 116, 139, 0.2);
+  background: rgba(15, 23, 42, 0.4);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.admin-engine-card:hover {
+  border-color: rgba(34, 211, 238, 0.4);
+  background: rgba(15, 23, 42, 0.6);
+  transform: translateY(-1px);
+}
+
+.admin-action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.625rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(100, 116, 139, 0.3);
+  background: rgba(30, 41, 59, 0.5);
+  color: #e2e8f0;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.admin-action-btn:hover {
+  border-color: rgba(34, 211, 238, 0.4);
+  background: rgba(30, 41, 59, 0.8);
+  color: #22d3ee;
+}

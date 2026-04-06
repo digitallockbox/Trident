@@ -1,0 +1,17 @@
+.profile-page {
+  min-height: 100vh;
+  padding: 2rem;
+  background: #0c1b26;
+  color: #edf6fb;
+}
+
+.profile-title {
+  margin-top: 0;
+}
+
+.profile-payload {
+  overflow-x: auto;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background: #071821;
+}

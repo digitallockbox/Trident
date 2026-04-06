@@ -1,0 +1,11 @@
+.wallet-connect {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.wallet-connect-error {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #ffe29a;
+}

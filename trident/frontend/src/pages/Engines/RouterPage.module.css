@@ -1,0 +1,42 @@
+.container {
+  padding: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.label {
+  display: block;
+  margin-top: 1rem;
+}
+.textarea {
+  width: 100%;
+  margin-top: 0.5rem;
+  font-family: monospace;
+  padding: 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+.button {
+  margin-top: 1rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 6px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+.button:disabled {
+  background: #999;
+  cursor: not-allowed;
+}
+.error {
+  color: red;
+  margin-top: 1rem;
+}
+.result {
+  margin-top: 1.5rem;
+  background: #f7f7f7;
+  padding: 1rem;
+  border-radius: 6px;
+  overflow-x: auto;
+}

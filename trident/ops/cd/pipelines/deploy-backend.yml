@@ -1,0 +1,19 @@
+name: Deploy Backend
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ["backend/**"]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build Docker image
+        run: docker build -f infra/docker/backend.Dockerfile -t trident-backend:${{ github.sha }} backend/
+      - name: Push to registry
+        run: echo "TODO: Push to container registry"
+      - name: Deploy
+        run: echo "TODO: Deploy to environment"

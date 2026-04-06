@@ -1,0 +1,56 @@
+.rpc-controls {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+}
+
+.rpc-controls-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #a0aec0;
+  margin: 0 0 1rem;
+}
+
+.rpc-controls-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.rpc-controls-btn {
+  padding: 0.45rem 1rem;
+  border-radius: 6px;
+  border: 1px solid rgba(99, 179, 237, 0.35);
+  background: rgba(99, 179, 237, 0.08);
+  color: #63b3ed;
+  font-size: 0.83rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition:
+    background 0.15s,
+    opacity 0.15s;
+}
+
+.rpc-controls-btn:hover:not(:disabled) {
+  background: rgba(99, 179, 237, 0.18);
+}
+
+.rpc-controls-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.rpc-controls-result {
+  margin: 0.75rem 0 0;
+  font-size: 0.8rem;
+  color: #68d391;
+}
+
+.rpc-controls-error {
+  margin: 0.75rem 0 0;
+  font-size: 0.8rem;
+  color: #fc8181;
+}

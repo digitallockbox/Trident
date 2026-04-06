@@ -1,0 +1,28 @@
+@keyframes aurora-flow {
+  0% {
+    opacity: var(--aurora-opacity-low, 0.10);
+    filter: blur(var(--aurora-blur-low, 10px));
+  }
+  50% {
+    opacity: var(--aurora-opacity-high, 0.30);
+    filter: blur(var(--aurora-blur-high, 40px));
+  }
+  100% {
+    opacity: var(--aurora-opacity-low, 0.10);
+    filter: blur(var(--aurora-blur-low, 10px));
+  }
+}
+
+.aurora-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: -3;
+  background: radial-gradient(
+    circle at var(--aurora-origin-x, 20%) var(--aurora-origin-y, 15%),
+    var(--aurora-color-1, rgba(102, 224, 255, 0.45)),
+    var(--aurora-color-2, rgba(0, 68, 255, 0.18)),
+    transparent 72%
+  );
+  animation: aurora-flow var(--aurora-speed, 18s) ease-in-out infinite;
+}

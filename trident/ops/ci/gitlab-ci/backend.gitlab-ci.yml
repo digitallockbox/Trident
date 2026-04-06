@@ -1,0 +1,10 @@
+backend:
+  stage: build
+  image: node:20-alpine
+  script:
+    - cd backend && npm ci
+    - cd backend && npx tsc --noEmit
+    - cd backend && npm test
+  only:
+    changes:
+      - backend/**/*

@@ -1,0 +1,34 @@
+.tier-badge {
+  display: inline-block;
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #062131;
+}
+
+.tier-badge--bronze {
+  background: #cd7f32;
+}
+
+.tier-badge--silver {
+  background: #c0c0c0;
+}
+
+.tier-badge--gold {
+  background: #ffd700;
+}
+
+.tier-badge--founder {
+  background: #8de6ff;
+}
+
+/* fallback for unknown tiers */
+.tier-badge:not([class*="tier-badge--bronze"]):not(
+    [class*="tier-badge--silver"]
+  ):not([class*="tier-badge--gold"]):not([class*="tier-badge--founder"]) {
+  background: rgba(141, 230, 255, 0.2);
+  color: #edf6fb;
+}

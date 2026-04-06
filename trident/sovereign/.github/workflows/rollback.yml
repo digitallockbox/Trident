@@ -1,0 +1,12 @@
+name: Rollback
+on:
+  workflow_dispatch:
+jobs:
+  rollback:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Rollback to SHA
+        run: |
+          git checkout ${{ github.event.inputs.sha }}
+          docker-compose -f docker-compose.production.yml up -d --force-recreate

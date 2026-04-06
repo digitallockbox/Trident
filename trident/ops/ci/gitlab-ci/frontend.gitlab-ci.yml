@@ -1,0 +1,11 @@
+frontend:
+  stage: build
+  image: node:20-alpine
+  script:
+    - cd frontend && npm ci
+    - cd frontend && npx tsc --noEmit
+    - cd frontend && npx vite build
+    - cd frontend && npm test
+  only:
+    changes:
+      - frontend/**/*

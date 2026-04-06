@@ -1,0 +1,104 @@
+/* Glassmorphic box for overlays */
+.box {
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Background image */
+body {
+  background-image: url("anemones.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+}
+
+/* Fullscreen login container */
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0a1a22 60%, #1a0a22 100%);
+  padding: 1rem;
+}
+
+/* Glassmorphic login form */
+.login-form {
+  background: rgba(30, 41, 59, 0.7);
+  border-radius: 1.25rem;
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.18);
+  padding: 2.5rem 2rem;
+  color: #edf6fb;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  min-width: 320px;
+  max-width: 90vw;
+}
+
+/* Title */
+.login-form h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  color: #00fff7;
+}
+
+/* Inputs */
+.login-form input {
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(100, 116, 139, 0.3);
+  background: rgba(15, 23, 42, 0.6);
+  color: #e2e8f0;
+  font-size: 1rem;
+  outline: none;
+  transition:
+    border-color 0.2s,
+    background 0.2s;
+}
+
+.login-form input:focus {
+  border-color: #00fff7;
+  background: rgba(15, 23, 42, 0.75);
+}
+
+/* Error message */
+.login-error {
+  color: #ff4d6d;
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Button */
+.login-form button {
+  background: linear-gradient(90deg, #00fff7 0%, #7f5cff 100%);
+  color: #0a1a22;
+  font-weight: 700;
+  border: none;
+  border-radius: 0.75rem;
+  padding: 0.75rem 2rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 2px 12px rgba(127, 92, 255, 0.2);
+  transition:
+    background 0.25s,
+    transform 0.15s;
+}
+
+.login-form button:hover {
+  background: linear-gradient(90deg, #7f5cff 0%, #00fff7 100%);
+  transform: translateY(-2px);
+}
+
+.login-form button:active {
+  transform: translateY(0);
+}

@@ -1,0 +1,15 @@
+openapi: "3.0.3"
+info:
+  title: Trident API
+  version: "1.0.0"
+  description: Trident platform backend API
+servers:
+  - url: http://localhost:4000
+    description: Local development
+paths:
+  /health:
+    get:
+      summary: Health check
+      responses:
+        "200":
+          description: OK

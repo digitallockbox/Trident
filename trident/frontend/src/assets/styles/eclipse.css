@@ -1,0 +1,28 @@
+@keyframes eclipse-shift {
+  0% {
+    opacity: var(--eclipse-opacity-low, 0.04);
+    filter: brightness(1);
+  }
+  50% {
+    opacity: var(--eclipse-opacity-high, 0.22);
+    filter: brightness(0.85);
+  }
+  100% {
+    opacity: var(--eclipse-opacity-low, 0.04);
+    filter: brightness(1);
+  }
+}
+
+.eclipse-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background: radial-gradient(
+    circle at var(--eclipse-origin-x, 80%) var(--eclipse-origin-y, 60%),
+    var(--eclipse-color-1, rgba(25, 35, 70, 0.28)),
+    var(--eclipse-color-2, rgba(12, 16, 38, 0.40)),
+    transparent 72%
+  );
+  animation: eclipse-shift var(--eclipse-speed, 20s) ease-in-out infinite;
+}

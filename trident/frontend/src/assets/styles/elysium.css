@@ -1,0 +1,28 @@
+@keyframes elysium-symbiosis {
+  0% {
+    opacity: var(--elysium-opacity-low, 0.06);
+    transform: scale(1);
+  }
+  50% {
+    opacity: var(--elysium-opacity-high, 0.18);
+    transform: scale(1.01);
+  }
+  100% {
+    opacity: var(--elysium-opacity-low, 0.06);
+    transform: scale(1);
+  }
+}
+
+.elysium-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: -5;
+  background: radial-gradient(
+    circle at var(--elysium-origin-x, 50%) var(--elysium-origin-y, 50%),
+    var(--elysium-color-1, rgba(192, 70, 255, 0.22)),
+    var(--elysium-color-2, rgba(90, 50, 220, 0.10)),
+    transparent 72%
+  );
+  animation: elysium-symbiosis var(--elysium-speed, 20s) ease-in-out infinite;
+}

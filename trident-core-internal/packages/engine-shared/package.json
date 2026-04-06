@@ -1,0 +1,17 @@
+{
+  "name": "@trident/engine-shared",
+  "version": "0.1.0",
+  "main": "engine.interface.ts",
+  "private": true,
+  "description": "Shared engine interface and orchestration for Trident platform",
+  "types": "engine.interface.ts",
+  "devDependencies": {
+    "jest": "^29.0.0",
+    "ts-jest": "^29.0.0",
+    "@types/jest": "^29.0.0",
+    "zod": "^3.0.0"
+  },
+  "scripts": {
+    "test": "jest --config jest.config.js --passWithNoTests"
+  }
+}

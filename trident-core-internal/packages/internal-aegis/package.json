@@ -1,0 +1,8 @@
+{
+  "name": "@trident/internal-aegis",
+  "version": "0.1.0",
+  "main": "src/public.ts",
+  "private": true,
+  "description": "Internal Aegis Engine for Trident platform",
+  "types": "src/public.ts"
+}

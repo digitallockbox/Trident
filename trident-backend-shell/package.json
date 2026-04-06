@@ -1,0 +1,17 @@
+{
+  "name": "trident-backend-shell",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^29.0.0",
+    "ts-jest": "^29.0.0",
+    "@types/jest": "^29.0.0",
+    "supertest": "^6.3.0",
+    "@types/supertest": "^2.0.12",
+    "zod": "^3.0.0"
+  },
+  "scripts": {
+    "test": "jest --config jest.config.js --passWithNoTests"
+  }
+}

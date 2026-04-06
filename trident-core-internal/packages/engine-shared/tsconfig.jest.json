@@ -1,0 +1,16 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "types": ["jest"]
+  },
+  "include": [
+    "__tests__/**/*.ts",
+    "../internal-omega/src/**/*.ts",
+    "../internal-aegis/src/**/*.ts",
+    "../internal-overwatch/src/**/*.ts",
+    "contracts/**/*.ts",
+    "*.ts"
+  ]
+}

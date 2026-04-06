@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "types": ["jest"]
+  },
+  "include": [
+    "__tests__/**/*.ts",
+    "src/**/*.ts",
+    "../trident-core-internal/packages/engine-shared/contracts/**/*.ts"
+  ]
+}

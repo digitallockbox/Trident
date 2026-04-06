@@ -1,3 +1,3 @@
 export const env = {
-  load: () => console.log("ENV placeholder loaded")
+    load: () => console.log("ENV placeholder loaded")
 };

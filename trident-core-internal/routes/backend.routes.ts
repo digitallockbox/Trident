@@ -1,3 +1,3 @@
 export const backendRoutes = {
-  health: "/api/health"
+    health: "/api/health"
 };

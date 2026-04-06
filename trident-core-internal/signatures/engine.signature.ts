@@ -1,3 +1,3 @@
 export const engineSignature = {
-  sign: () => "signature-placeholder"
+    sign: () => "signature-placeholder"
 };

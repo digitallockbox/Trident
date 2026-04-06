@@ -1,3 +1,3 @@
 export const dbClient = {
-  connect: () => console.log("DB client placeholder")
+    connect: () => console.log("DB client placeholder")
 };

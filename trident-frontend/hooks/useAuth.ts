@@ -1,3 +1,3 @@
 export const useAuth = () => {
-  return { authenticated: false };
+    return { authenticated: false };
 };

@@ -1,3 +1,3 @@
 export const errorHandler = () => {
-  console.log("Error handler placeholder");
+    console.log("Error handler placeholder");
 };

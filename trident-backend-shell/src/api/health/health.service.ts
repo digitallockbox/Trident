@@ -1,3 +1,3 @@
 export const healthService = {
-  getStatus: () => "ok"
+    getStatus: () => "ok"
 };

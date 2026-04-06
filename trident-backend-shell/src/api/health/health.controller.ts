@@ -1,3 +1,3 @@
 export const healthController = {
-  status: () => ({ status: "ok" })
+    status: () => ({ status: "ok" })
 };

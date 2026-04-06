@@ -1,4 +1,4 @@
 export const apiRoutes = {
-  health: "/api/health",
-  system: "/api/system"
+    health: "/api/health",
+    system: "/api/system"
 };

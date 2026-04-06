@@ -1,3 +1,3 @@
 export const authController = {
-  login: () => ({ message: "login placeholder" })
+    login: () => ({ message: "login placeholder" })
 };

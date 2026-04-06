@@ -1,3 +1,3 @@
 export const AEngineService = {
-  execute: () => "A-engine execution placeholder"
+    execute: () => "A-engine execution placeholder"
 };

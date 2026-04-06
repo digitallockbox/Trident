@@ -1,3 +1,3 @@
 export const requestLogger = () => {
-  console.log("Request logger placeholder");
+    console.log("Request logger placeholder");
 };

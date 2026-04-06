@@ -1,4 +1,4 @@
 export type EngineConfig = {
-  name: string;
-  version: string;
+    name: string;
+    version: string;
 };

@@ -1,3 +1,3 @@
 export const authService = {
-  validate: () => true
+    validate: () => true
 };

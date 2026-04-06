@@ -1,4 +1,4 @@
 export const bootstrap = () => {
-  console.log("Trident Backend Shell initialized");
+    console.log("Trident Backend Shell initialized");
 };
 bootstrap();

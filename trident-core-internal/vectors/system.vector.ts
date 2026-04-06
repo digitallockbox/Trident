@@ -1,4 +1,4 @@
 export const systemVector = {
-  id: "system-vector",
-  description: "placeholder vector"
+    id: "system-vector",
+    description: "placeholder vector"
 };

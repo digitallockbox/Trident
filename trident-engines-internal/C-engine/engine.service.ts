@@ -1,10 +1,9 @@
-import { CEngineConfig } from "./engine.config";
+import { EngineMetadata } from "../../trident-core-internal/types/engine.types";
 
-export const CEngineService = {
-    getMetadata: () => ({
-        id: CEngineConfig.id,
-        name: CEngineConfig.name,
-        version: CEngineConfig.version,
-        active: CEngineConfig.active
-    })
+getMetadata: (): EngineMetadata => ({
+    id: CEngineConfig.id,
+    name: CEngineConfig.name,
+    version: CEngineConfig.version,
+    active: CEngineConfig.active
+})
 };

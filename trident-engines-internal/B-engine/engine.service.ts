@@ -1,10 +1,9 @@
-import { BEngineConfig } from "./engine.config";
+import { EngineMetadata } from "../../trident-core-internal/types/engine.types";
 
-export const BEngineService = {
-    getMetadata: () => ({
-        id: BEngineConfig.id,
-        name: BEngineConfig.name,
-        version: BEngineConfig.version,
-        active: BEngineConfig.active
-    })
+getMetadata: (): EngineMetadata => ({
+    id: BEngineConfig.id,
+    name: BEngineConfig.name,
+    version: BEngineConfig.version,
+    active: BEngineConfig.active
+})
 };

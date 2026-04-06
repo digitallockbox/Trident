@@ -1,10 +1,9 @@
-import { DEngineConfig } from "./engine.config";
+import { EngineMetadata } from "../../trident-core-internal/types/engine.types";
 
-export const DEngineService = {
-    getMetadata: () => ({
-        id: DEngineConfig.id,
-        name: DEngineConfig.name,
-        version: DEngineConfig.version,
-        active: DEngineConfig.active
-    })
+getMetadata: (): EngineMetadata => ({
+    id: DEngineConfig.id,
+    name: DEngineConfig.name,
+    version: DEngineConfig.version,
+    active: DEngineConfig.active
+})
 };

@@ -1,10 +1,14 @@
+
 import { Router } from "express";
+import { EngineMetadata } from "../../../trident-core-internal/types/engine.types";
 import registry from "../../../trident-engines-internal/engine-registry.json";
 
 export const engineRoutes = Router();
 
+
 engineRoutes.get("/", (req, res) => {
-    res.json(registry.engines);
+    const engines: EngineMetadata[] = registry.engines;
+    res.json(engines);
 });
 
 engineRoutes.get("/:id", (req, res) => {

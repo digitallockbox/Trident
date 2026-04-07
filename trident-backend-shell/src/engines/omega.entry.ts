@@ -1,17 +1,16 @@
-// omega.entry.ts
-// Entrypoint for Omega engine — routes to internal or dev logic based on environment
+import { Router } from 'express';
+import { EngineMetadata } from '../trident-core-internal/types/engine';
+import registry from '../trident-engines-internal/registry.json';
 
-import { isInternalEnv } from '../config/env';
-import { OmegaEngine } from '@trident/internal-omega/src/engine';
-import { executeOmegaDev } from './omega.dev';
+export const engineRoutes = Router();
 
-export async function executeOmegaEntry(payload: any) {
-    if (isInternalEnv()) {
-        // Use orchestrator or direct engine instantiation as needed
-        const engine = new OmegaEngine();
-        return engine.execute(payload);
-    } else {
-        // Use contractor-safe dev logic
-        return executeOmegaDev(payload);
-    }
-}
+engineRoutes.get('/', (req, res) => {
+    const engines: EngineMetadata[] = registry.engines;
+    res.json(engines);
+});
+
+engineRoutes.get('/:id', (req, res) => {
+    const engine = registry.engines.find(e => e.id === req.params.id);
+    if (!engine) return res.status(404).json({ error: 'Engine not found' });
+    res.json(engine);
+});

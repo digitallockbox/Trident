@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+<<<<<<< HEAD
     "target": "ES2020",
     "module": "commonjs",
     "outDir": "./dist",
@@ -12,4 +13,18 @@
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "dist"]
+=======
+    "target": "es2022",
+    "module": "commonjs",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": false,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "**/*.test.ts"]
+>>>>>>> 4d8821e2a9cc80fe6f171855a2b2d1af9056e788
 }

@@ -7,6 +7,7 @@ import { engineRouter } from '../src/routes/engineRouter';
 
 describe('EngineRouter Integration', () => {
     const app = express();
+    app.disable('x-powered-by');
     app.use(express.json());
     app.use('/engines', engineRouter);
 

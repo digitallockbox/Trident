@@ -10,7 +10,8 @@ export default function ApiTestPage() {
     setResponse(null);
     setError(null);
     try {
-      const res = await fetch(`http://localhost:4000${endpoint}`, {
+      const baseUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000";
+      const res = await fetch(`${baseUrl}${endpoint}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

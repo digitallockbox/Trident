@@ -24,13 +24,13 @@ app.get("/health", (req, res) => {
     res.json({ status: "ok" });
 });
 
-app.post("/engine/omega", (req, res) => res.json({ engine: "omega", status: "mock" }));
-app.post("/engine/aegis", (req, res) => res.json({ engine: "aegis", status: "mock" }));
-app.post("/engine/overwatch", (req, res) => res.json({ engine: "overwatch", status: "mock" }));
+app.all("/engine/omega", (req, res) => res.json({ engine: "omega", status: "mock" }));
+app.all("/engine/aegis", (req, res) => res.json({ engine: "aegis", status: "mock" }));
+app.all("/engine/overwatch", (req, res) => res.json({ engine: "overwatch", status: "mock" }));
 
-app.post("/stream/start", (req, res) => res.json({ stream: "started", action: "start", status: "mock" }));
-app.post("/stream/stop", (req, res) => res.json({ stream: "stopped", action: "stop", status: "mock" }));
-app.get("/stream/status", (req, res) => res.json({ stream: "active", uptime: 120, status: "mock" }));
+app.all("/stream/start", (req, res) => res.json({ stream: "started", action: "start", status: "mock" }));
+app.all("/stream/stop", (req, res) => res.json({ stream: "stopped", action: "stop", status: "mock" }));
+app.all("/stream/status", (req, res) => res.json({ stream: "active", uptime: 120, status: "mock" }));
 app.use(errorHandler);
 
 const PORT = process.env.PORT || 4000;

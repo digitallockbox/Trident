@@ -4,6 +4,7 @@ import { authRoutes } from "./routes/auth.routes";
 import { systemRoutes } from "./routes/system.routes";
 import { requestLogger } from "./middleware/request-logger";
 import { errorHandler } from "./middleware/error-handler";
+import { apiRoutes } from "./routes/api.routes";
 
 import { engineRoutes } from "./routes/engine.routes";
 

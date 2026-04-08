@@ -5,11 +5,4 @@ export const apiRoutes = Router();
 
 apiRoutes.get("/health", healthController.status);
 
-export const apiRoutes = {
-    health: "/api/health",
-    system: "/api/system"
-};
-export const apiRoutes = {
-    health: "/api/health",
-    system: "/api/system"
-};
+

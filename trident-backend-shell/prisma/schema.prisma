@@ -8,6 +8,7 @@ generator client {
 }
 
 model User {
+<<<<<<< HEAD
   id        String   @id @default(cuid())
   email     String   @unique
   password  String
@@ -19,4 +20,8 @@ model Project {
   userId    String
   title     String
   createdAt DateTime @default(now())
+=======
+  id    Int     @id @default(autoincrement())
+  email String  @unique
+>>>>>>> 4d8821e2a9cc80fe6f171855a2b2d1af9056e788
 }

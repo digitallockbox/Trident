@@ -1,5 +1,6 @@
-export const requestLogger = () => {
-    export const requestLogger = (req, res, next) => {
-        console.log(`[${req.method}] ${req.url}`);
-        next();
-    };
+import { Request, Response, NextFunction } from 'express';
+
+export const requestLogger = (req: Request, res: Response, next: NextFunction) => {
+    console.log(`[${req.method}] ${req.url}`);
+    next();
+};

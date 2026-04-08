@@ -3,6 +3,3 @@ export const db = new PrismaClient();
 export const dbClient = {
     connect: () => console.log("DB client placeholder")
 };
-export const dbClient = {
-    connect: () => console.log("DB client placeholder")
-};

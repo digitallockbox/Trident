@@ -19,6 +19,18 @@ app.use("/api/system", systemRoutes);
 
 app.use("/api/engines", engineRoutes);
 
+// TRIDENT OS — DEVELOPER TESTING PROTOCOL (MOCKS)
+app.get("/health", (req, res) => {
+    res.json({ status: "ok" });
+});
+
+app.post("/engine/omega", (req, res) => res.json({ engine: "omega", status: "mock" }));
+app.post("/engine/aegis", (req, res) => res.json({ engine: "aegis", status: "mock" }));
+app.post("/engine/overwatch", (req, res) => res.json({ engine: "overwatch", status: "mock" }));
+
+app.post("/stream/start", (req, res) => res.json({ stream: "started", action: "start", status: "mock" }));
+app.post("/stream/stop", (req, res) => res.json({ stream: "stopped", action: "stop", status: "mock" }));
+app.get("/stream/status", (req, res) => res.json({ stream: "active", uptime: 120, status: "mock" }));
 app.use(errorHandler);
 
 const PORT = process.env.PORT || 4000;

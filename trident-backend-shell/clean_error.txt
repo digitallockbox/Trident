@@ -1,0 +1,22 @@
+src/api/auth/auth.controller.ts(1,29): error TS2307: Cannot find module './auth.service' or its corresponding type declarations.
+src/db/client.ts(1,30): error TS2307: Cannot find module '@prisma/client' or its corresponding type declarations.
+src/db/client.ts(3,14): error TS2451: Cannot redeclare block-scoped variable 'dbClient'.
+src/db/client.ts(6,14): error TS2451: Cannot redeclare block-scoped variable 'dbClient'.
+src/engines/aegis.entry.ts(4,31): error TS2307: Cannot find module '../config/env' or its corresponding type declarations.
+src/engines/aegis.entry.ts(5,29): error TS2307: Cannot find module '@trident/internal-aegis/src/engine' or its corresponding type declarations.
+src/engines/aegis.entry.ts(6,33): error TS2307: Cannot find module './aegis.dev' or its corresponding type declarations.
+src/engines/omega.entry.ts(4,31): error TS2307: Cannot find module '../config/env' or its corresponding type declarations.
+src/engines/omega.entry.ts(5,29): error TS2307: Cannot find module '@trident/internal-omega' or its corresponding type declarations.
+src/engines/omega.entry.ts(6,33): error TS2307: Cannot find module './omega.dev' or its corresponding type declarations.
+src/engines/overwatch.entry.ts(4,31): error TS2307: Cannot find module '../config/env' or its corresponding type declarations.
+src/engines/overwatch.entry.ts(5,33): error TS2307: Cannot find module '@trident/internal-overwatch/src/engine' or its corresponding type declarations.
+src/engines/overwatch.entry.ts(6,37): error TS2307: Cannot find module './overwatch.dev' or its corresponding type declarations.
+src/routes/auth.routes.ts(7,43): error TS2339: Property 'logout' does not exist on type '{ login: () => { message: string; }; }'.
+src/routes/auth.routes.ts(8,43): error TS2339: Property 'session' does not exist on type '{ login: () => { message: string; }; }'.
+src/routes/engine.routes.ts(3,10): error TS2305: Module '"../../../trident-core-internal/types/engine.types"' has no exported member 'EngineMetadata'.
+src/routes/engine.routes.ts(3,32): error TS6059: File 'D:/trident2/Trident/trident-core-internal/types/engine.types.ts' is not under 'rootDir' 'D:/trident2/Trident/trident-backend-shell/src'. 'rootDir' is expected to contain all source files.
+src/routes/engineRouter.ts(5,44): error TS2307: Cannot find module '../engines/engineRegistry' or its corresponding type declarations.
+src/routes/engineRouter.ts(6,29): error TS2307: Cannot find module '@trident/engine-shared/orchestratorWrapper' or its corresponding type declarations.
+src/routes/engines.ts(2,32): error TS2307: Cannot find module '../trident-core-internal/types/engine-types' or its corresponding type declarations.
+src/routes/engines.ts(3,22): error TS2307: Cannot find module '../trident-engines-internal/engine-registry.json' or its corresponding type declarations.
+src/services/system.service.ts(1,28): error TS6059: File 'D:/trident2/Trident/trident-core-internal/types/system.types.ts' is not under 'rootDir' 'D:/trident2/Trident/trident-backend-shell/src'. 'rootDir' is expected to contain all source files.

@@ -10,7 +10,7 @@ export default function EnginesPage() {
   return (
     <div style={{ padding: 20 }}>
       <h1>Engines</h1>
-      {data?.map((engine) => (
+      {(data as any[])?.map((engine: any) => (
         <div key={engine.id}>
           <Link href={`/engines/${engine.id}`}>
             {engine.name} ({engine.id})

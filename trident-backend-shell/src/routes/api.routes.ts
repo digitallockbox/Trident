@@ -1,9 +1,14 @@
 import { Router } from "express";
 import { healthController } from "../api/health/health.controller";
 
+import { streamRoutes } from "./stream.routes";
+
 export const apiRoutes = Router();
 
 apiRoutes.get("/health", healthController.status);
+
+// Stream lifecycle endpoints
+apiRoutes.use("/streams", streamRoutes);
 <<<<<<< HEAD
 =======
 

@@ -2,8 +2,7 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "module": "commonjs",
-    "esModuleInterop": true,
-    "types": ["jest"]
+    "esModuleInterop": true
   },
   "include": [
     "__tests__/**/*.ts",

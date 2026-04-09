@@ -1,0 +1,24 @@
+name: Prevent Submodules
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  check-for-submodules:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fail if .gitmodules exists or submodules are present
+        run: |
+          if [ -f .gitmodules ]; then
+            echo "❌ .gitmodules file found! Submodules are not allowed."
+            exit 1
+          fi
+          if git submodule status | grep -q .; then
+            echo "❌ Submodules detected in the repository!"
+            exit 1
+          fi
+          echo "✅ No submodules found."

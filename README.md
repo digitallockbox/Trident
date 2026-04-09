@@ -21,10 +21,10 @@ All sensitive engines, payouts, intelligence systems, and backend mechanisms rem
 Monorepo Structure
 Code
 Trident/
-  trident-backend-shell/     → Public API shell
-  trident-core-internal/     → Types, registries, signatures, vectors
-  trident-engines-internal/  → Private engine universe
-  trident-frontend/          → Cinematic creator interface
+trident-backend-shell/ → Public API shell
+trident-core-internal/ → Types, registries, signatures, vectors
+trident-engines-internal/ → Private engine universe
+trident-frontend/ → Cinematic creator interface
 Each module is isolated, versioned, and sovereign‑safe.
 
 Module Summaries
@@ -110,20 +110,20 @@ Development Philosophy
 Trident OS is built on five non‑negotiable principles:
 
 1. Sovereignty
-The founder maintains absolute control over architecture, engines, and internal mechanisms.
+   The founder maintains absolute control over architecture, engines, and internal mechanisms.
 
 2. Determinism
-Every module, file, and folder exists for a reason.
-No drift. No ambiguity. No chaos.
+   Every module, file, and folder exists for a reason.
+   No drift. No ambiguity. No chaos.
 
 3. Zero Mechanism Exposure
-Public code contains no logic, no algorithms, no internal systems, and no proprietary mechanisms.
+   Public code contains no logic, no algorithms, no internal systems, and no proprietary mechanisms.
 
 4. Multi‑Engine Isolation
-Each engine is sealed, versioned, and independently orchestrated.
+   Each engine is sealed, versioned, and independently orchestrated.
 
 5. Cinematic UX
-The frontend delivers a premium, frictionless creator experience.
+   The frontend delivers a premium, frictionless creator experience.
 
 Local Development
 Clone the repo:

@@ -1,0 +1,11 @@
+[submodule "trident-private/engines/aegis"]
+    path = trident-private/engines/aegis
+    url = https://github.com/your-org/aegis.git
+
+[submodule "trident-private/engines/omega"]
+    path = trident-private/engines/omega
+    url = https://github.com/your-org/omega.git
+
+[submodule "trident-private/engines/overwatch"]
+    path = trident-private/engines/overwatch
+    url = https://github.com/your-org/overwatch.git

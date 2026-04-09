@@ -1,0 +1,28 @@
+# Ignore all private and secret folders/files
+trident-private/
+trident-privateengines*
+.env
+*.env
+secrets/
+*.key
+*.pem
+*.crt
+*.p12
+*.jks
+*.keystore
+*.pfx
+*.asc
+*.gpg
+*.bak
+*.backup
+*.sqlite
+*.db
+*.log
+# Node modules and system files
+node_modules/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/

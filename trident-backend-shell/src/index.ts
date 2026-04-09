@@ -6,9 +6,13 @@ import { requestLogger } from "./middleware/request-logger";
 import { errorHandler } from "./middleware/error-handler";
 import { apiRoutes } from "./routes/api.routes";
 
+
+import { apiRoutes } from "./routes/api.routes";
 import { engineRoutes } from "./routes/engine.routes";
 
+
 const app = express();
+app.disable('x-powered-by');
 app.use(express.json());
 app.use(cors());
 app.use(requestLogger);

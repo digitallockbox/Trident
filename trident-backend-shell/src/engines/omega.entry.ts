@@ -5,12 +5,12 @@ import { isInternalEnv } from '../config/env';
 import { OmegaEngine } from '@trident/internal-omega';
 import { executeOmegaDev } from './omega.dev';
 
-export async function executeOmegaEntry(payload: any) {
-  if (isInternalEnv()) {
-    const engine = new OmegaEngine();
-    return engine.execute(payload);
-  }
+export async function executeOmegaEntry(payload: unknown) {
+    if (isInternalEnv()) {
+        const engine = new OmegaEngine();
+        return engine.execute(payload);
+    }
 
-  // Contractor‑safe dev logic
-  return executeOmegaDev(payload);
+    // Contractor‑safe dev logic
+    return executeOmegaDev(payload);
 }
